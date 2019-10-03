@@ -13,7 +13,7 @@ export default {
     fontFamily: "Roboto",
     height: "100%",
     display: "flex",
-    alignItems: center,
+    alignItems: "center",
     "& a": {
       textDecoration: "none",
       color: "black"
