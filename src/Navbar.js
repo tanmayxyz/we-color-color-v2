@@ -28,14 +28,14 @@ class Navbar extends Component {
     const { level, changeLevel, showingAllColors } = this.props;
     const { format } = this.state;
     return (
-      <header className='Navbar'>
-        <div className='logo'>
-          <Link to='/'>reactcolorpicker</Link>
+      <header className="Navbar">
+        <div className="logo">
+          <Link to="/">reactcolorpicker</Link>
         </div>
         {showingAllColors && (
-          <div className='slider-container'>
+          <div className="slider-container">
             <span>Level: {level}</span>
-            <div className='slider'>
+            <div className="slider">
               <Slider
                 defaultValue={level}
                 min={100}
@@ -46,11 +46,11 @@ class Navbar extends Component {
             </div>
           </div>
         )}
-        <div className='select-container'>
+        <div className="select-container">
           <Select value={format} onChange={this.handleFormatChange}>
-            <MenuItem value='hex'>HEX - #ffffff</MenuItem>
-            <MenuItem value='rgb'>RGB - rgb(255,255,255)</MenuItem>
-            <MenuItem value='rgba'>RGBA - rgba(255,255,255, 1.0)</MenuItem>
+            <MenuItem value="hex">HEX - #ffffff</MenuItem>
+            <MenuItem value="rgb">RGB - rgb(255,255,255)</MenuItem>
+            <MenuItem value="rgba">RGBA - rgba(255,255,255, 1.0)</MenuItem>
           </Select>
         </div>
         <Snackbar
@@ -58,7 +58,7 @@ class Navbar extends Component {
           open={this.state.open}
           autoHideDuration={3000}
           message={
-            <span id='message-id'>
+            <span id="message-id">
               Format Changed To {format.toUpperCase()}
             </span>
           }
@@ -69,9 +69,9 @@ class Navbar extends Component {
           action={[
             <IconButton
               onClick={this.closeSnackbar}
-              color='inherit'
-              key='close'
-              aria-label='close'
+              color="inherit"
+              key="close"
+              aria-label="close"
             >
               <CloseIcon />
             </IconButton>
